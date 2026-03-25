@@ -1,3 +1,37 @@
+## Installation
+
+Use your preferred package manager to install the package:
+
+```shell
+npm add @allurereport/plugin-jira
+yarn add @allurereport/plugin-jira
+pnpm add @allurereport/plugin-jira
+```
+
+## Options
+
+The plugin accepts the following options:
+
+| Option          | Description                                          | Type      | Environment Variable         |
+| --------------- | ---------------------------------------------------- | --------- | ---------------------------- |
+| `webhook`       | Allure Jira Integration Webhook URL                  | `string`  | `ALLURE_JIRA_WEBHOOK`        |
+| `token`         | Generated Atlassian API token                        | `string`  | `ALLURE_JIRA_TOKEN`          |
+| `issue`         | Jira issue to link report to                         | `string`  | `ALLURE_JIRA_ISSUE`          |
+| `uploadReport`  | Whether to upload the report to specified jira issue | `boolean` | `ALLURE_JIRA_UPLOAD_REPORT`  |
+| `uploadResults` | Whether to upload the test results to linked issues  | `boolean` | `ALLURE_JIRA_UPLOAD_RESULTS` |
+
+**Note:** Any values set in your `allurerc.mjs` configuration file will take precedence over values defined in environment variables.
+
+
+
+
+
+
+
+
+
+
+
 ## install deps
 
 ```shell
