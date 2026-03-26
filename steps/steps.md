@@ -1,4 +1,4 @@
-# Start using Allure3 plugin for Jira Software CLoud
+# Start using Allure3 plugin for Jira Software Cloud
 
 ## Update configs
 
