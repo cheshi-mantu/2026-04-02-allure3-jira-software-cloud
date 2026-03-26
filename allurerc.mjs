@@ -13,7 +13,6 @@ export default defineConfig({
         reportLanguage: "en",
         open: true,
         groupBy: ["feature"],
-        charts: chartLayout,
       },
       jira: {
         options: {

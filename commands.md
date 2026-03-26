@@ -22,6 +22,23 @@ The plugin accepts the following options:
 
 **Note:** Any values set in your `allurerc.mjs` configuration file will take precedence over values defined in environment variables.
 
+### Token in Jira profile
+
+1. Navigate to [Atlassian Account > Security > API Tokens](https://id.atlassian.com/manage/api-tokens).
+2. Click the "Create API token with scopes" button.
+3. Enter a name for your token and set an expiration date.
+4. Select "Jira" as the API token application.
+5. Search for and enable the `read:jira-user` scope.
+6. Save the token and copy it to your clipboard.
+7. Create a string in the format `useremail:api_token`, where `useremail` is your Jira account email and `api_token` is the token you just created. Then, encode this string using BASE64.
+
+
+
+
+
+
+
+
 
 
 ## install deps

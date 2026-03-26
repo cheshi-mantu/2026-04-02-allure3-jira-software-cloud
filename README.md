@@ -13,3 +13,5 @@
 - Configure the plug-in
 - Update pipelines
 - Enjoy
+
+See step-by-step [here.](./steps/steps.md)
