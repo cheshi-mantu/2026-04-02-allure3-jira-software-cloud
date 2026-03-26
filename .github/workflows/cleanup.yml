@@ -45,7 +45,7 @@ jobs:
           pnpm install allure
           pnpm add @allurereport/plugin-jira
 
-      - name: Generate Allure Report
+      - name: JSC Cleanup
         run: | 
           pnpm allure jira clear --token $ALLURE_JIRA_TOKEN --webhook $ALLURE_JIRA_WEBHOOK --issue ARFJ-1 --issue ARFJ-5 --results --reports
         env:
