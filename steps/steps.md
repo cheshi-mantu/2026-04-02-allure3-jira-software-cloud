@@ -22,13 +22,14 @@ adding [this](https://github.com/allure-framework/allure3/blob/main/packages/plu
 ### Getting Webhook URL
 
 1. Go Administration
-   1. → Apps
-      1. → Platform Experiences
-         1. → Sites
-            1. → YourSiteName
-               1. → Connected apps
-                  1. → Allure Report for Jira Cloud
-                     1. → Get started
+   - → Apps
+      - → Platform Experiences
+         - → Sites
+            - → YourSiteName
+               - → Connected apps
+                  - → Allure Report for Jira Cloud
+                     - → Get started
+                       - ![](trollface.png)
 2. Copy the webhook URL.
 
 ### Getting API token
