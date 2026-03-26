@@ -44,25 +44,10 @@ adding [this](https://github.com/allure-framework/allure3/blob/main/packages/plu
 ```shell
 ALLURE_JIRA_TOKEN=$(echo -n "${USER_EMAIL}:${API_TOKEN}" | base64)
 ```
+
 or
 
 ```shell
 ALLURE_JIRA_TOKEN="$(printf '%s' "${USER_EMAIL}:${API_TOKEN}" | openssl base64 -A)"
 ```
 
-
-
-
-USER_EMAIL=$(security find-generic-password -a "$USER" -s "QS_TESTING_EMAIL" -w)
-API_TOKEN=$(security find-generic-password -a "$USER" -s "QS_ALLURE_JIRA_TOKEN" -w)
-
-<!-- QS_ALLURE_JIRA_CREDS=$(printf '%s' "${USER_EMAIL}:${API_TOKEN}" | openssl base64 -A) -->
-
-
-security delete-generic-password -a "$USER" -s "QS_ALLURE_JIRA_CREDS"
-security add-generic-password -a "$USER" -s "QS_ALLURE_JIRA_CREDS" -w "$(printf '%s' "${USER_EMAIL}:${API_TOKEN}" | openssl base64 -A)"
-
-
-
-
-echo "$AUTH_DATA" > token.txt
