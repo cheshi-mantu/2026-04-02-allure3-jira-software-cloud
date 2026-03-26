@@ -45,13 +45,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Install playwright
-        # run: pnpm exec playwright install
-        run: pnpm add -D @playwright/test playwright-core
-
-      - name: Install playwright deps
-        run: pnpm exec playwright install-deps
-
       - name: Install allure3
         run: pnpm install allure
 
