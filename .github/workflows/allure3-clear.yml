@@ -47,7 +47,7 @@ jobs:
 
       - name: Generate Allure Report
         run: | 
-          pnpm allure jira clear --token $ALLURE_JIRA_TOKEN --webhook ALLURE_JIRA_WEBHOOK --issue ARFJ-1 --issue ARFJ-5 --results --reports
+          pnpm allure jira clear --token $ALLURE_JIRA_TOKEN --webhook $ALLURE_JIRA_WEBHOOK --issue ARFJ-1 --issue ARFJ-5 --results --reports
         env:
           ALLURE_JIRA_ISSUE: ${{ github.event.inputs.ISSUE_KEY }}
           ALLURE_JIRA_WEBHOOK: ${{ secrets.ALLURE_JIRA_WEBHOOK }}
