@@ -3,7 +3,6 @@ const allure = require("allure-js-commons");
 
 const {
   attachJiraIssue,
-  attachWrikeIssue,
   attachMicroservice,
   authorize,
   createNewEntity,
@@ -21,12 +20,10 @@ test("Authenticated user must be able to create a new project", async () => {
   await allure.epic("Projects");
   await allure.feature("Managing Projects");
   await allure.story("Authenticated user can manage projects");
+  await allure.issue("ARFJ-1");
   await allure.tags("web", "critical", "regress");
-  await attachJiraIssue("AD-4");
-  await attachWrikeIssue("1730120169");
   await allure.layer("e2e");
   await allure.owner("bugsbunny");
-  await attachMicroservice("report");
   await authorize();
   await createNewEntity("Project");
 });
@@ -35,10 +32,8 @@ test("Authenticated and properly authorized user must be able to delete an exist
   await allure.epic("Projects");
   await allure.feature("Managing Projects");
   await allure.story("Authenticated user can manage projects");
+  await allure.issue("ARFJ-1");
   await allure.tags("web", "regress");
-  await attachJiraIssue("AD-5");
-  await attachWrikeIssue("1730120182");
-  await attachMicroservice("report");
   await allure.layer("e2e");
   await allure.owner("bugsbunny");
   await authorize();
@@ -49,10 +44,8 @@ test("Authenticated and properly authorized user must be able to update an exist
   await allure.epic("Projects");
   await allure.feature("Managing Projects");
   await allure.story("Authenticated user can manage projects");
+  await allure.issue("ARFJ-1");
   await allure.tags("web", "regress");
-  await attachJiraIssue("AD-6");
-  await attachWrikeIssue("1730120185");
-  await attachMicroservice("report");
   await allure.layer("e2e");
   await allure.owner("bugsbunny");
   await authorize();
@@ -63,10 +56,8 @@ test("Project name cannot be longer than 255 characters", async () => {
   await allure.epic("Projects");
   await allure.feature("Managing Projects");
   await allure.story("Validation of project name length");
+  await allure.issue("ARFJ-1");
   await allure.tags("regress");
-  await attachJiraIssue("AD-4");
-  await attachWrikeIssue("1730120169");
-  await attachMicroservice("report");
   await allure.layer("e2e");
   await allure.owner("bugsbunny");
   await authorize();

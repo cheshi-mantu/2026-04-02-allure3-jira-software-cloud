@@ -26,8 +26,7 @@ test("Test Case name cannot be longer than 255 characters", async () => {
   await attachJiraIssue("AD-7");
   await attachMicroservice("report");
   await attachJiraIssue("AD-9");
-  await attachWrikeIssue("1730120186");
-  await allure.layer("e2e");
+    await allure.layer("e2e");
   await allure.owner("egorivanov");
   await authorize();
   const longName = "a".repeat(256);

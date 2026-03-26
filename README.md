@@ -2,5 +2,14 @@
 
 ## Why
 
-- Send stats on a test run to the respective task
+- Send stats on a test run to the respective task.
 - Send stats for a specific Jira Cloud issue covered by a test.
+- Delete data from Jira Software Cloud issue.
+
+## How
+
+- Add plug-in to configuration
+- Generate Jira Software Cloud webhook and credentials
+- Configure the plug-in
+- Update pipelines
+- Enjoy

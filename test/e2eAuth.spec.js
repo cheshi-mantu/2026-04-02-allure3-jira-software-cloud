@@ -4,11 +4,6 @@ const allure = require("allure-js-commons");
 const {
   attachJiraIssue,
   attachMicroservice,
-  attachWrikeIssue,
-  authorize,
-  createNewEntity,
-  deleteNewEntity,
-  updateEntity,
 } = require("./utils");
 
 
@@ -29,7 +24,6 @@ test("Login Form - Valid Credentials", async() => {
   await allure.story("Login form");
   await allure.layer("e2e");
   await attachJiraIssue("AD-1");
-  await attachWrikeIssue("1730118722");
   await attachMicroservice("uaa");
   await allure.owner("egorivanov");
   await allure.step("Enter valid username and password", async () => {
@@ -50,7 +44,6 @@ test("Login Form - Invalid Credentials", async() => {
   await allure.story("Login form");
   await allure.layer("e2e");
   await attachJiraIssue("AD-1");
-  await attachWrikeIssue("1730118722");
   await attachMicroservice("uaa");
   await allure.owner("egorivanov");
   await allure.tags("web", "regress", "critical");
@@ -71,7 +64,6 @@ test("Login Form - Empty Fields", async() => {
   await allure.feature("Built-in authentication");
   await allure.story("Login form");
   await attachJiraIssue("AD-1");
-  await attachWrikeIssue("1730118722");
   await allure.tags("web", "regress", "critical", "auth");
   await allure.layer("e2e");
   await allure.owner("egorivanov");

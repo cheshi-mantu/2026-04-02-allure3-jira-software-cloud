@@ -11,10 +11,6 @@ const attachJiraIssue = async (val) => {
   await allure.label("jira", val);
 };
 
-const attachWrikeIssue = async (val) => {
-  await allure.label("wrk", val);
-};
-
 const attachMicroservice = async (val) => {
   await allure.label("msrv", val);
 };
@@ -145,7 +141,6 @@ const getStatus = (min, max) => {
 
 module.exports = {
   attachJiraIssue,
-  attachWrikeIssue,
   attachMicroservice,
   authorize,
   createNewEntity,

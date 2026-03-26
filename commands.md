@@ -24,14 +24,6 @@ The plugin accepts the following options:
 
 
 
-
-
-
-
-
-
-
-
 ## install deps
 
 ```shell
