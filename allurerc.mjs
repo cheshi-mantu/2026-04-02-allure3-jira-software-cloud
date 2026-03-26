@@ -14,6 +14,7 @@ export default defineConfig({
         open: true,
         groupBy: ["feature"],
       },
+    },
       jira: {
         options: {
           issue: process.env.ALLURE_JIRA_ISSUE, 
@@ -24,7 +25,6 @@ export default defineConfig({
         },
       },
     },
-  },
   variables: {
     env_variable: "unknown",
     build: process.env.RELEASE_INFO || "local",
