@@ -52,3 +52,10 @@ or
 ALLURE_JIRA_TOKEN="$(printf '%s' "${USER_EMAIL}:${API_TOKEN}" | openssl base64 -A)"
 ```
 
+### Update your repo and workflows
+
+- Create [repo secrets](https://github.com/cheshi-mantu/2026-04-02-allure3-jira-software-cloud/settings/secrets/actions)
+- [Update workflow](https://github.com/cheshi-mantu/2026-04-02-allure3-jira-software-cloud/blob/main/.github/workflows/allure3.yml#L54)
+
+
+Try to run. Fix errors.
