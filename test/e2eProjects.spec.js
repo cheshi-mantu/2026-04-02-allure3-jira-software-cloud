@@ -2,8 +2,6 @@ const { expect, test } = require("@playwright/test");
 const allure = require("allure-js-commons");
 
 const {
-  attachJiraIssue,
-  attachMicroservice,
   authorize,
   createNewEntity,
   deleteNewEntity,
