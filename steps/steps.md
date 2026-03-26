@@ -34,10 +34,6 @@ adding [this](https://github.com/allure-framework/allure3/blob/main/packages/plu
 
 ### Create Credentials for Webhook authentication
 
-
-
-
-
 USER_EMAIL=$(security find-generic-password -a "$USER" -s "QS_TESTING_EMAIL" -w)
 API_TOKEN=$(security find-generic-password -a "$USER" -s "QS_ALLURE_JIRA_TOKEN" -w)
 
