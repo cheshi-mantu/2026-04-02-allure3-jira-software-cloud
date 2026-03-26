@@ -1,0 +1,55 @@
+name: remove allure3 results from issues
+
+on: 
+  # push: 
+  #   branches:
+  #     - main
+  workflow_dispatch:
+      
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  pull-requests: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-allure-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable pnpm
+
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install allure3
+        run: |
+          pnpm install allure
+          pnpm add @allurereport/plugin-jira
+
+      - name: Generate Allure Report
+        run: | 
+          pnpm allure jira clear --token $ALLURE_JIRA_TOKEN --webhook ALLURE_JIRA_WEBHOOK --issue ARFJ-1 --issue ARFJ-5 --results --reports
+        env:
+          ALLURE_JIRA_ISSUE: ${{ github.event.inputs.ISSUE_KEY }}
+          ALLURE_JIRA_WEBHOOK: ${{ secrets.ALLURE_JIRA_WEBHOOK }}
+          ALLURE_JIRA_TOKEN: ${{ secrets.ALLURE_JIRA_TOKEN }}
+
