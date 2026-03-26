@@ -34,6 +34,14 @@ adding [this](https://github.com/allure-framework/allure3/blob/main/packages/plu
 
 ### Create Credentials for Webhook authentication
 
+```shell
+ALLURE_JIRA_TOKEN=$(echo -n "${USER_EMAIL}:${API_TOKEN}" | base64)
+```
+or
+
+```shell
+ALLURE_JIRA_TOKEN="$(printf '%s' "${USER_EMAIL}:${API_TOKEN}" | openssl base64 -A)"
+```
 
 
 

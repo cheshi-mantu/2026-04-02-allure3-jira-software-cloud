@@ -36,7 +36,7 @@ The plugin accepts the following options:
 
 
 
-pnpm allure jira clear --token $ALLURE_JIRA_TOKEN --webhook ALLURE_JIRA_WEBHOOK --issue ARFJ-1 --results --reports
+pnpm allure jira clear --token $ALLURE_JIRA_TOKEN --webhook $ALLURE_JIRA_WEBHOOK --issue ARFJ-1 --results --reports
 
 
 
