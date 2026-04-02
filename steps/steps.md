@@ -1,5 +1,11 @@
 # Start using Allure3 plugin for Jira Software Cloud
 
+## Get the plugin
+
+1. In Beta testing
+2. Ask `allure@qameta.io` to provide the installation link
+3. Install to your JSC instance
+
 ## Update configs
 
 Add [this](https://github.com/allure-framework/allure3/blob/main/packages/plugin-jira/README.md#installation) configuration under plug-in section of allure3 configuration file.
