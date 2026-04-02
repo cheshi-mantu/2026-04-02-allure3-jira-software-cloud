@@ -12,7 +12,7 @@ API_TOKEN=$(security find-generic-password -a "$USER" -s "QS_ALLURE_JIRA_TOKEN" 
 security delete-generic-password -a "$USER" -s "QS_ALLURE_JIRA_CREDS"
 security add-generic-password -a "$USER" -s "QS_ALLURE_JIRA_CREDS" -w "$(printf '%s' "${USER_EMAIL}:${API_TOKEN}" | openssl base64 -A)"
 
-export ALLURE_JIRA_ISSUE=ARFJ-1
+export ALLURE_JIRA_ISSUE=ARFJ-5
 export ALLURE_JIRA_WEBHOOK=$(security find-generic-password -a "$USER" -s "QS_ALLURE_JIRA_WEBHOOK" -w)
 export ALLURE_JIRA_TOKEN=$(security find-generic-password -a "$USER" -s "QS_ALLURE_JIRA_CREDS" -w)
 
