@@ -3,12 +3,9 @@ const allure = require("allure-js-commons");
 
 const {
   attachJiraIssue,
-  attachWrikeIssue,
   attachMicroservice,
   authorize,
   createNewEntity,
-  deleteNewEntity,
-  updateEntity,
 } = require("./utils");
 
 
@@ -22,7 +19,6 @@ test("Test Case name cannot be longer than 255 characters", async () => {
   await allure.feature("Managing test cases");
   await allure.story("Creation of test cases");
   await allure.tags("regress");
-  await allure.label("ALLURE_MANUAL", "true");
   await attachJiraIssue("AD-7");
   await attachMicroservice("report");
   await attachJiraIssue("AD-9");
